@@ -49,5 +49,5 @@ Ce projet est une application web simple permettant de gérer des stagiaires, le
 
 1. **Cloner le projet**
    ```bash
-   git clone https://github.com/votre-utilisateur/gestion-stagiaires.git
+   git clone https://github.com/Abdellah-EL-ATRACH/GestionStagiaireSecurity.git
    cd gestion-stagiaires
