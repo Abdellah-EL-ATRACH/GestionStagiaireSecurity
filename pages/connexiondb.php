@@ -1,8 +1,7 @@
 <?php
 try {
 
-    $pdo = new PDO("mysql:host=localhost;dbname=gestion_stag",
-        "root", "Tr@mW0rk");
+   $pdo = new PDO("mysql:host=localhost;dbname=gestion_stag", "root", "");
 
 }catch (Exception $e){
     die('Erreur : ' . $e->getMessage());
