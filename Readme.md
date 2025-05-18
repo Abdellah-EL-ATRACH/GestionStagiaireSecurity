@@ -55,7 +55,6 @@ Ce projet est une application web de gestion de stagiaires, avec une interface s
 
 - ✅ Diagramme de **cas d’utilisation** incluant : Gérer son compte, Initialiser mot de passe, Authentifier, Gérer stagiaire, Gérer filière, etc.
 - ✅ Diagramme de **classe** : `Stagiaire`, `Filière`, `User` avec les relations et cardinalités respectées.
-- ✅ Diagramme de **séquence** disponible pour : Ajouter un stagiaire (voir `/docs/`)
 
 ---
 
@@ -75,7 +74,7 @@ Ce projet est une application web de gestion de stagiaires, avec une interface s
    git clone https://github.com/Abdellah-EL-ATRACH/GestionStagiaireSecurity.git
    cd GestionStagiaireSecurity
 ## Autheurs
-**EL ATRACH Abdellah**
-**ADNAN Hassan**
-**EDDREG Khadija**
-**OUHMAD Hadda**
+- **EL ATRACH Abdellah**
+- **ADNAN Hassan**
+- **EDDREG Khadija**
+- **OUHMAD Hadda**
