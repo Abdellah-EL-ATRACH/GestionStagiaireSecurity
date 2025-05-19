@@ -1,9 +1,9 @@
 <?php
-    require_once('identifier.php');
+    require_once('../auth/identifier.php');
     
     $message=isset($_GET['message'])?$_GET['message']:"Erreur";
     
-    $url=isset($_GET['url'])?$_GET['url']:"index.php";
+    $url=isset($_GET['url'])?$_GET['url']:"../index.php";
     
 ?>
 <! DOCTYPE HTML>
@@ -11,8 +11,8 @@
     <head>
         <meta charset="utf-8">
         <title>Alerte</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/monstyle.css">
     </head>
     <body>
         
@@ -30,7 +30,7 @@
                 
                     <h4>Vous serez redireger dans 3 secondes</h4>
                     
-                   	<?php  header("refresh:5;url=$url"); ?>
+                   	<?php  header("refresh:3;url=$url"); ?>
                    	
                 </div>
         

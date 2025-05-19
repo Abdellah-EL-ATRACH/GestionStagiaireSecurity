@@ -2,11 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    header('location:login.php');
+    header('location:../../auth/login.php');
     exit();
 } else {
     if ($_SESSION['user']['role'] != 'ADMIN') {
-        header('location:seDeconnecter.php');
+        header('location:../../auth/seDeconnecter.php');
         exit();
     }
 }

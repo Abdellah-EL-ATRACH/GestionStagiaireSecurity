@@ -1,6 +1,7 @@
 <?php
-    require_once('identifier.php');
-    require_once('connexiondb.php');
+    require_once('../../auth/identifier.php');
+    require_once('../../config/connexiondb.php');
+    
     $nom=isset($_POST['nom'])?$_POST['nom']:"";
     $prenom=isset($_POST['prenom'])?$_POST['prenom']:"";
     $civilite=isset($_POST['civilite'])?$_POST['civilite']:"F";

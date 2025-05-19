@@ -2,7 +2,7 @@
         session_start();
         if(isset($_SESSION['user'])){
             
-            require_once('connexiondb.php');
+            require_once('../../config/connexiondb.php');
             
             $idUser=isset($_GET['idUser'])?$_GET['idUser']:0;
             

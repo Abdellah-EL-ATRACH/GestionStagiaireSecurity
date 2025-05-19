@@ -2,7 +2,7 @@
 
 require_once ('identifier.php');
 
-require_once ('connexiondb.php');
+require_once ('../config/connexiondb.php');
 
 $iduser=$_SESSION['user']['iduser'];
 
@@ -42,7 +42,7 @@ if($resultat->fetch()) {
 <html>
 <head>
     <title>Changement de mot de passe</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">

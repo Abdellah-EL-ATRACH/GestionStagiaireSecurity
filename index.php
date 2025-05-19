@@ -1,3 +1,3 @@
 <?php
-    header("location:pages/filieres.php");
+    header("location:modules/Filiere/filieres.php");
 ?>

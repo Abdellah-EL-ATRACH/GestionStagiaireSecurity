@@ -1,6 +1,7 @@
 <?php
-    require_once('role.php');
-    require_once("connexiondb.php");
+    require_once('../../includes/role.php');
+    require_once("../../config/connexiondb.php");
+
     $login=isset($_GET['login'])?$_GET['login']:"";
     
     $size=isset($_GET['size'])?$_GET['size']:3;
@@ -26,12 +27,12 @@
     <head>
         <meta charset="utf-8">
         <title>Gestion des utilisateurs</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
     </head>
     <body>
-        <?php include("menu.php"); ?>
+        <?php include("../../includes/menu.php"); ?>
         
         <div class="container">
             <div class="panel panel-success margetop60">

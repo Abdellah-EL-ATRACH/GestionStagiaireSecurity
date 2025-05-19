@@ -1,6 +1,7 @@
 <?php
-   require_once('identifier.php');
-    require_once('connexiondb.php');
+    require_once('../../auth/identifier.php');
+    require_once('../../config/connexiondb.php');
+
     $idf=isset($_GET['idF'])?$_GET['idF']:0;
     $requete="select * from filiere where idFiliere=$idf";
     $resultat=$pdo->query($requete);
@@ -13,12 +14,12 @@
     <head>
         <meta charset="utf-8">
         <title>Edition d'une filière</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
     </head>
     <body>
-        <?php include("menu.php"); ?>
+        <?php include("../../includes/menu.php"); ?>
         
         <div class="container">
                        

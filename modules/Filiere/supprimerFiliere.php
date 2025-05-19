@@ -2,7 +2,8 @@
     session_start();
         if(isset($_SESSION['user'])){
             
-            require_once('connexiondb.php');
+            require_once('../../config/connexiondb.php');
+
             $idf=isset($_GET['idF'])?$_GET['idF']:0;
 
             $requeteStag="select count(*) countStag from stagiaire where idFiliere=$idf";
@@ -18,11 +19,11 @@
                 header('location:filieres.php');
             }else{
                 $msg="Suppression impossible: Vous devez supprimer tous les stagiaires inscris dans cette filière";
-                header("location:alerte.php?message=$msg");
+                header("location:../../pages/alerte.php?message=$msg");
             }
             
          }else {
-                header('location:login.php');
+                header('location:../../auth/login.php');
         }
     
     

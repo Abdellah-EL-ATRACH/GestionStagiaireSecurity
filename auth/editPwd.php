@@ -7,9 +7,9 @@ require_once('identifier.php');
 <head>
     <meta charset="utf-8"/>
     <title>Changement de mot de passe</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/monstyle.css">
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/monjs.js"></script>
 </head>
