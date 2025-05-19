@@ -1,8 +1,7 @@
 <?php
-    require_once('identifier.php');
-    
-    require_once("connexiondb.php");
-  
+    require_once('../../auth/identifier.php');
+    require_once("../../config/connexiondb.php");
+
     $nomPrenom=isset($_GET['nomPrenom'])?$_GET['nomPrenom']:"";
     $idfiliere=isset($_GET['idfiliere'])?$_GET['idfiliere']:0;
     
@@ -55,12 +54,12 @@
     <head>
         <meta charset="utf-8">
         <title>Gestion des stagiaires</title>
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
     </head>
     <body>
-        <?php require("menu.php"); ?>
+        <?php require("../../includes/menu.php"); ?>
         
         <div class="container">
             <div class="panel panel-success margetop60">
@@ -139,7 +138,7 @@
                                     <td><?php echo $stagiaire['prenom'] ?> </td> 
                                     <td><?php echo $stagiaire['nomFiliere'] ?> </td>
                                     <td>
-                                        <img src="../images/<?php echo $stagiaire['photo']?>"
+                                        <img src="../../assets/images/<?php echo $stagiaire['photo']?>"
                                         width="50px" height="50px" class="img-circle">
                                     </td> 
                                     

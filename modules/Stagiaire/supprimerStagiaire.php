@@ -4,7 +4,7 @@
             
             if($_SESSION['user']['role']=='ADMIN'){
                
-                require_once('connexiondb.php');
+                require_once('../../config/connexiondb.php');
                 
                 $idS=isset($_GET['idS'])?$_GET['idS']:0;
 
@@ -27,6 +27,6 @@
             }
            
         }else {
-                header('location:login.php');
+                header('location:../../auth/login.php');
         }
 ?>

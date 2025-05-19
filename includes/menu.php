@@ -8,19 +8,19 @@
 	
 		<div class="navbar-header">
 		
-			<a href="../index.php" class="navbar-brand">Gestion des stagiaires</a>
+			<a href="../../index.php" class="navbar-brand">Gestion des stagiaires</a>
 			
 		</div>
 		
 		<ul class="nav navbar-nav">
 					
-			<li><a href="stagiaires.php">
+			<li><a href="../Stagiaire/stagiaires.php">
                     <i class="fa fa-vcard"></i>
                     &nbsp Les Stagiaires
                 </a>
             </li>
 			
-			<li><a href="filieres.php">
+			<li><a href="../Filiere/filieres.php">
                     <i class="fa fa-tags"></i>
                     &nbsp Les Filières
                 </a>
@@ -28,7 +28,7 @@
 			
 			<?php if ($_SESSION['user']['role']=='ADMIN') {?>
 					
-				<li><a href="Utilisateurs.php">
+				<li><a href="../Utilisateur/Utilisateurs.php">
                         <i class="fa fa-users"></i>
                         &nbsp Les utilisteurs
                     </a>
@@ -49,7 +49,7 @@
 			</li>
 			
 			<li>
-				<a href="seDeconnecter.php">
+				<a href="../../auth/seDeconnecter.php">
                     <i class="fa fa-sign-out"></i>
 					&nbsp Se déconnecter
 				</a>

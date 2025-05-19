@@ -1,7 +1,6 @@
 <?php
-    require_once('identifier.php');
-
-    require_once('connexiondb.php');
+    require_once('../../includes/role.php');
+    require_once("../../config/connexiondb.php");
 
     $iduser=isset($_POST['iduser'])?$_POST['iduser']:0;
 
@@ -17,5 +16,5 @@
 
     $resultat->execute($params);
     
-    header('location:login.php');
+    header('location:utilisateurs.php');
 ?>

@@ -12,8 +12,8 @@ session_destroy();
 <head>
     <meta charset="utf-8">
     <title>Se connecter</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/monstyle.css">
 </head>
 <body>
 <div class="container col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">

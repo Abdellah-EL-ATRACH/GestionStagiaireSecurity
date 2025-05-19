@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once('connexiondb.php');
+    require_once('../config/connexiondb.php');
     
     $login=isset($_POST['login'])?$_POST['login']:"";
     

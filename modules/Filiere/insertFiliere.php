@@ -1,6 +1,6 @@
 <?php
-    require_once('identifier.php');
-    require_once('connexiondb.php');
+    require_once('../../auth/identifier.php');
+    require_once('../../config/connexiondb.php');
     
     $nomf=isset($_POST['nomF'])?$_POST['nomF']:"";
     $niveau=isset($_POST['niveau'])?strtoupper($_POST['niveau']):"";
