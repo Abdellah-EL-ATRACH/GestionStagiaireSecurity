@@ -61,11 +61,11 @@ GestionStagiaireSecurity/
 │       ├── editerUtilisateur.php
 │       ├── nouvelUtilisateur.php
 │       ├── supprimerUtilisateur.php
-│       ├── updateUtilisateur.php
+│       ├── updateUtilisateur.php   
 │       └── utilisateur.php
 │
 ├── pages/                            # Pages secondaires ou globales
 │   └── alerte.php
 │
 ├── index.php                         # Page principale (accueil / redirection)
-└── README.md                         # Documentation générale (optionnel)
+└── README.md                         # Documentation générale 

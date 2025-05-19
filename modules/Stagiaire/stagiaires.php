@@ -54,6 +54,7 @@
     <head>
         <meta charset="utf-8">
         <title>Gestion des stagiaires</title>
+        <link rel="icon" type="image/x-icon" href="../../assets/images/logo_icon.ico">
         <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
