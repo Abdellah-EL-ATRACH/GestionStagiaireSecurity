@@ -57,6 +57,13 @@
         <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
+
+        <!-- insert csp -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com https://code.jquery.com; style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com; img-src 'self' data: https://www.google.com https://www.gstatic.com; font-src 'self' data: https://maxcdn.bootstrapcdn.com;">
+        <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/monjs.js"></script>
+        
     </head>
     <body>
         <?php include("../../includes/menu.php"); ?>

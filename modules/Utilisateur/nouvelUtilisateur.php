@@ -1,7 +1,7 @@
 <?php
 
-require_once("connexiondb.php");
-require_once("../les_fonctions/fonctions.php");
+require_once("../../config/connexiondb.php");
+require_once("../../functions/fonctions.php");
 
 //echo 'Nombre des  user1 :  '.rechercher_par_login('user1');
 //echo 'Nombre des  user1@gmail.com :  '.rechercher_par_email('user1@gmail.com');
@@ -78,8 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <title> Nouvel utilisateur </title>
 
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/monstyle.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/monstyle.css">
 
 </head>
 <body>
