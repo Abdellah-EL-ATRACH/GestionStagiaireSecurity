@@ -1,7 +1,7 @@
 <?php
-require_once('connexiondb.php');
+require_once('../config/connexiondb.php');
 
-require_once('../les_fonctions/fonctions.php');
+require_once('../functions/fonctions.php');
 
 if (isset($_POST['email']))
     $email = $_POST['email'];
@@ -21,7 +21,7 @@ if ($user != null) {
 
     $content = "Votre nouveau mot de passe est 0000, veuillez le modifier à la prochine ouverture de session";
 
-    $entetes = "From: GesStag" . "\r\n" . "CC: gestionstagiaire2018@gmail.com";
+    $entetes = "From: GesStag" . "\r\n" . "CC: 	ABDELLAHELATRACH20@GMAIL.COM";
 
     mail($to, $objet, $content, $entetes);
 
@@ -44,7 +44,7 @@ if ($user != null) {
 <head>
     <meta charset="utf-8"/>
     <title>Initiliser votre mot de passe</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container col-md-6 col-md-offset-3">
@@ -77,14 +77,14 @@ if ($user != null) {
 
             echo '<div class="alert alert-danger">' . $msg . '</div>';
 
-            header("refresh:3;url=initialiserPwd.php");
+            header("refresh:5;url=initialiserPwd.php");
 
             exit();
         } else if ($erreur == "non") {
 
             echo '<div class="alert alert-success">' . $msg . '</div>';
 
-            header("refresh:3;url=login.php");
+            header("refresh:5;url=login.php");
 
             exit();
         }
