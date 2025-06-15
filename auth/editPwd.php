@@ -1,72 +1,100 @@
 <?php
 require_once('identifier.php');
 ?>
-
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8"/>
-    <title>Changement de mot de passe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Changement de Mot de Passe - Gestion des Stagiaires</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo_icon.ico">
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/monstyle.css">
-    <script src="../js/jquery-3.3.1.js"></script>
-    <script src="../js/monjs.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/editPwd.css">
+
 </head>
 <body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
 
-
-<div class="container editpwd-page">
-    <h1 class="text-center">Changement de mot de passe</h1>
-
-    <h2 class="text-center"> Compte :<?php echo $_SESSION['user']['login'] ?>    </h2>
-
-    <form class="form-horizontal" method="post" action="updatePwd.php">
-
-
-        <!-- ***************** Début Ancien mot de passe  ***************** -->
-        <div class="input-container">
-            <input class="form-control oldpwd"
-                   type="password"
-                   name="oldpwd"
-                   autocomplete="new-password"
-                   placeholder="Taper votre Ancien Mot de passe"
-                   required>
-            <i class="fa fa-eye fa-2x show-old-pwd clickable"></i>
+    <div class="editpwd-container">
+        <div class="editpwd-header">
+            <div class="icon">
+                <i class="fa fa-key"></i>
+            </div>
+            <h2>Changement</h2>
+            <p>Compte: <?php echo htmlspecialchars($_SESSION['user']['login']) ?></p>
         </div>
-
-
-        <!-- ***************** Fin Ancien mot de passe ***************** -->
-
-        <!--  *****************Début Nouveau  mot de passe  ***************** -->
-
-        <div class="input-container">
-            <input minlength=4
-                    class="form-control newpwd"
-                    type="password"
-                    name="newpwd"
-                    autocomplete="new-password"
-                    placeholder="Taper votre Nouveau Mot de passe"
-                    required>
-            <i class="fa fa-eye fa-2x show-new-pwd clickable"></i>
-
+        
+        <div class="editpwd-body">
+            <form method="post" action="updatePwd.php" class="form" id="editPwdForm">
+                <div class="form-group">
+                    <input type="password" name="oldpwd" class="form-control" placeholder=" " 
+                           autocomplete="current-password" required id="oldPwdInput" minlength="4"/>
+                    <i class="input-icon fa fa-lock"></i>
+                    <label class="form-label">Ancien mot de passe</label>
+                    <i class="password-toggle fa fa-eye" id="toggleOldPwd"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="newpwd" class="form-control" placeholder=" " 
+                           autocomplete="new-password" required id="newPwdInput" minlength="4"/>
+                    <i class="input-icon fa fa-lock"></i>
+                    <label class="form-label">Nouveau mot de passe</label>
+                    <i class="password-toggle fa fa-eye" id="toggleNewPwd"></i>
+                </div>
+                <button type="submit" class="btn btn-save" id="submitBtn">
+                    <div class="loading"></div>
+                    <i class="fa fa-save"></i>
+                    Enregistrer
+                </button>
+            </form>
         </div>
-        <!--  *****************  Fin Nouveau  mot de passe   ***************** -->
+    </div>
 
-        <!--  ***************** start submit field  ***************** -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Toggle password visibility for old password
+            $('#toggleOldPwd').click(function() {
+                const oldPwdInput = $('#oldPwdInput');
+                const type = oldPwdInput.attr('type') === 'password' ? 'text' : 'password';
+                oldPwdInput.attr('type', type);
+                $(this).toggleClass('fa-eye fa-eye-slash');
+            });
 
-        <input
-                type="submit"
-                value="Enregistrer"
-                class="btn btn-primary btn-block"/>
+            // Toggle password visibility for new password
+            $('#toggleNewPwd').click(function() {
+                const newPwdInput = $('#newPwdInput');
+                const type = newPwdInput.attr('type') === 'password' ? 'text' : 'password';
+                newPwdInput.attr('type', type);
+                $(this).toggleClass('fa-eye fa-eye-slash');
+            });
 
-        <!--   ***************** end submit field  ***************** -->
+            // Form submission with loading state
+            $('#editPwdForm').submit(function() {
+                const submitBtn = $('#submitBtn');
+                submitBtn.addClass('loading');
+                submitBtn.prop('disabled', true);
+                
+                setTimeout(function() {
+                    submitBtn.removeClass('loading');
+                    submitBtn.prop('disabled', false);
+                }, 3000);
+            });
 
-    </form>
-</div>
+            // Input focus effects
+            $('.form-control').on('focus blur', function() {
+                $(this).parent().toggleClass('focused');
+            });
 
+            // Auto-focus on old password input
+            $('#oldPwdInput').focus();
+        });
+    </script>
 </body>
 </html>
-
-
-
