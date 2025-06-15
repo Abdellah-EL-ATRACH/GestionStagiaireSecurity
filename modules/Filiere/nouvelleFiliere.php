@@ -5,7 +5,7 @@
 <HTML>
     <head>
         <meta charset="utf-8">
-        <tit>Nouvelle filière</tit>
+        <title>Nouvelle filière</title>
         <link rel="icon" type="image/x-icon" href="../../assets/images/logo_icon.ico">
         <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
