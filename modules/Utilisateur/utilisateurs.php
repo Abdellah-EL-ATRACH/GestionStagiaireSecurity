@@ -96,7 +96,7 @@
                         <tbody>
                             <?php foreach($resultatUser as $user): ?>
                                 <tr class="<?php echo $user['etat'] == 1 ? 'success' : 'danger' ?>">
-                                    <td><?php echo htmlspecialchars($user['login']) ?></td>
+                                    <td><?php echo $user['login'] ?></td>
                                     <td><?php echo htmlspecialchars($user['email']) ?></td>
                                     <td>
                                         <span class="label label-<?php echo $user['role'] === 'ADMIN' ? 'danger' : 'info' ?>">

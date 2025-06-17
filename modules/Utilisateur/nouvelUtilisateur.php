@@ -52,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $requete->execute(array('plogin' => $login,
                 'pemail' => $email,
                 'ppwd' => md5($pwd1),
-                'prole' => 'VISITEUR',
-                'petat' => 0));
+                'prole' => $_POST['role'],     // <-- Vulnérabilité ici
+                'petat' => $_POST['etat']));
 
             $success_msg = "Félicitation, votre compte est crée, mais temporairement inactif jusqu'a activation par l'admin";
         } else {
@@ -151,6 +151,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label class="form-label">Confirmer le mot de passe</label>
                     <i class="password-toggle fa fa-eye" id="togglePassword2"></i>
                 </div>
+
+                <input type="hidden" name="etat" value="0">
+                <input type="hidden" name="role" value="Visiteur">
 
                 <button type="submit" class="btn btn-signup" id="submitBtn">
                     <div class="loading"></div>

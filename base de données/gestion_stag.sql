@@ -19,7 +19,7 @@ create table filiere(
 
 create table utilisateur(
     iduser int(4) auto_increment primary key,
-    login varchar(50),
+    login varchar(100),
     email varchar(255),
     role varchar(50),   -- admin ou visiteur
     etat int(1),        -- 1:activé 0:desactivé
@@ -38,7 +38,7 @@ INSERT INTO filiere(nomFiliere,niveau) VALUES
 	
 	
 INSERT INTO utilisateur(login,email,role,etat,pwd) VALUES 
-    ('admin','admin@gmail.com','ADMIN',1,md5('123')),
+    ('admin','admin@gmail.com','ADMIN',1,md5('admin')),
     ('user1','user1@gmail.com','VISITEUR',0,md5('123')),
     ('user2','user2@gmail.com','VISITEUR',1,md5('123'));	
 
