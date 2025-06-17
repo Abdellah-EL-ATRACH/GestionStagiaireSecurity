@@ -196,7 +196,7 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <strong><?php echo htmlspecialchars($stagiaire['nom']) ?></strong>
+                                        <strong><?php echo $stagiaire['nom'] ?></strong>
                                     </td>
                                     <td>
                                         <?php echo htmlspecialchars($stagiaire['prenom']) ?>
